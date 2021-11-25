@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:padding="8dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEE5EA"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dp"
+        android:text="@string/activity_b_label"
+        android:textColor="@color/blue"
+        android:textSize="34sp" />
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/start_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="startActivityA"
+            android:text="Start A"
+            android:textSize="12sp"
+            app:backgroundTint="#000000" />
+
+        <Button
+            android:id="@+id/start_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/start_a"
+            android:onClick="startActivityC"
+            android:text="Start C"
+            android:textSize="12sp"
+            app:backgroundTint="#000000" />
+
+        <Button
+            android:id="@+id/finish_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/start_c"
+            android:onClick="finishActivityB"
+            android:text="Finish B"
+            android:textSize="12sp"
+            app:backgroundTint="#000000" />
+
+        <Button
+            android:id="@+id/start_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/finish_b"
+            android:onClick="startDialog"
+            android:text="Dialog"
+            android:textSize="12sp"
+            app:backgroundTint="#000000" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abhaya_libre_bold"
+        android:text="@string/lifecycle_method_list"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <TextView
+            android:id="@+id/status_view_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:typeface="monospace"
+            />
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_status"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/status_view_all_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="4dp"
+        android:typeface="monospace"
+        />
+</LinearLayout>
